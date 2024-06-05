@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="player">
+    <div class="player">
+    </div>
+    <video controls="" autoplay="" name="media">
+        <source src="https://github.com/dieenx/Unlimited_Google_Photos_on_PC/raw/main/Video.mp4" type="video/mp4">
+    </video>
+    <svg width="0" height="0">
+        <filter id="ambilight" width="300%" height="300%" x="-0.75" y="-0.75" color-interpolation-filters="sRGB">
+            <feOffset in="SourceGraphic" result="source-copy"></feOffset>
+            <feColorMatrix in="source-copy" type="saturate" values="4" result="saturated-copy"></feColorMatrix>
+            <feColorMatrix in="saturated-copy" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 33 33 33 101 -100" result="bright-colors"></feColorMatrix>
+            <feMorphology in="bright-colors" operator="dilate" radius="25" result="spread"></feMorphology>
+            <feGaussianBlur in="spread" stdDeviation="40" result="ambilight-light"></feGaussianBlur>
+            <feOffset in="SourceGraphic" result="source"></feOffset>
+            <feComposite in="source" in2="ambilight-light" operator="over"></feComposite>
+        </filter>
+    </svg>
+</div>
+<svg width="0" height="0">
+    <filter id="ambilight" width="300%" height="300%" x="-0.75" y="-0.75" color-interpolation-filters="sRGB">
+        <feOffset in="SourceGraphic" result="source-copy"></feOffset>
+        <feColorMatrix in="source-copy" type="saturate" values="4" result="saturated-copy"></feColorMatrix>
+        <feColorMatrix in="saturated-copy" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 33 33 33 101 -100" result="bright-colors"></feColorMatrix>
+        <feMorphology in="bright-colors" operator="dilate" radius="25" result="spread"></feMorphology>
+        <feGaussianBlur in="spread" stdDeviation="40" result="ambilight-light"></feGaussianBlur>
+        <feOffset in="SourceGraphic" result="source"></feOffset>
+        <feComposite in="source" in2="ambilight-light" operator="over"></feComposite>
+    </filter>
+</svg>
+
+<style>
+body {
+display: grid;
+place-items: center;
+min-height: 120dvh;
+background: #050505;
+}
+
+.player {
+position: relative;
+filter: url(#ambilight);
+
+video {
+width: 200px;
+height: 300px;
+
+@media screen and (min-width: 720px) {
+height: min(100vh, 480px);
+width: auto;
+}
+}
+}
+
+/** view my other pens */
+.source {
+position: fixed;
+left: 1rem;
+bottom: 1rem;
+display: flex;
+flex-direction: column;
+color: white;
+font-size: 0.815em;
+background: #1a7cb5;
+padding: 0.5em;
+gap: 0.5em;
+
+a {
+color: currentColor;
+}
+}
+</style>
+</body>
+</html>
+
