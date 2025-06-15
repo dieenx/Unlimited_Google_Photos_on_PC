@@ -1,7 +1,5 @@
 ### Tải file
-| [Download](https://github.com/dieenx/Unlimited_Google_Photos_on_PC/raw/main/pixelify.zip)|
-| --------------------------:|
----
+[![Download](https://img.shields.io/badge/Download-pixelify.zip-blue)](https://github.com/dieenx/Unlimited_Google_Photos_on_PC/raw/main/pixelify.zip)
 
 
 https://github.com/dieenx/Unlimited_Google_Photos_on_PC/assets/87995853/3b31604a-d7d6-4548-a257-ccef25132889
